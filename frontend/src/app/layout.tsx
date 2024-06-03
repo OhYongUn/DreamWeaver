@@ -22,19 +22,19 @@ export default function RootLayout({children,}: Readonly<{
     return (
         <html lang="en">
         <body className={inter.className}>
-        <ThemeProvider
+        {/*<ThemeProvider
             attribute="class"
             defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
-        >
+        >*/}
         <div className="flex flex-col min-h-screen">
             <Header/>
                 {children}
             <Footer/>
         </div>
 
-            </ThemeProvider>
+           {/* </ThemeProvider>*/}
         </body>
         </html>
 );

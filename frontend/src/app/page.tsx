@@ -5,8 +5,14 @@ import Button from "@/components/ui/button";
 import React from "react";
 import Rotate3dIcon from "@/components/ui/Rotate3dIcon";
 import Dice2Icon from "@/components/ui/Dice2Icon";
+import {useRouter} from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+  const navigateToDesignPage = () => {
+    router.push('/design');  // '/design' 경로는 실제 프로젝트의 라우트 경로에 맞게 조정해야 합니다.
+  };
+
   return (
       <main className="flex-1 bg-gray-100 py-12 md:py-16">
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
@@ -28,7 +34,7 @@ export default function Home() {
               </div>*/}
             </div>
             <div className="flex justify-center">
-              <Button size="xl" className="px-8 py-6" onClick={() => console.log('Rotate3dIcon')}>
+              <Button size="xl" className="px-8 py-6" onClick={navigateToDesignPage}>
                 Start Designing
               </Button>
             </div>
